@@ -1,0 +1,27 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+    {% block nav %}
+        {% include 'partials/navigation.menu.jinja.html' %}
+    {% endblock nav %}
+
+    <div class="main-content container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="page-title">
+                    {% block pagetitle %}{% endblock pagetitle %}
+                </h3>
+            </div>
+            <div class="col-sm-6">
+                {% block status %}{% endblock %}
+            </div>
+        </div>
+        <div class="row-fluid">
+            {% include 'partials/messages.jinja.html' %}
+        </div>
+
+        {% block main %}{% endblock main %}
+
+    </div>
+    {{ super() }}
+{% endblock content %}

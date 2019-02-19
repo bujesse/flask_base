@@ -13,6 +13,7 @@ Werkzeug==0.14.1
 
 # Misc.
 requests==2.19.1
+purl==1.4
 
 # Databases
 PyMySQL==0.9.2

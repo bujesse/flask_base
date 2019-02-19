@@ -22,7 +22,7 @@ blueprint = Blueprint('user', __name__)
 def login():
     if current_user.is_authenticated:
         flash('You are already logged in.', 'info')
-        return redirect(url_for('blockbuster.index'))
+        return redirect(url_for('index.index'))
 
     return render_template(
         'user/login.jinja.html'
